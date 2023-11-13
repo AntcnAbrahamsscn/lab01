@@ -43,62 +43,158 @@
 
 // console.log("Nisse har: " + pengarRounded + " på sitt konto efter 5 år.");
 
-for (let row = 1; row <= 6; row++) {
-    let textRow = "";
-    for (let column = 1; column <= 8; column++) {
-        if (column % 2 === 1) {
-            textRow += "#";
-        } else {
-            textRow += ".";
+// Figur 1
+export function figurEtt() {
+    for (let row = 1; row <= 6; row++) {
+        let textRow = "";
+        for (let column = 1; column <= 8; column++) {
+            if (column === 1) {
+                textRow += "#";
+            } else {
+                textRow += ".";
+            }
         }
+        console.log(textRow);
     }
-    console.log(textRow);
 }
 
-console.log(" ");
-
-for (let row = 1; row <= 6; row++) {
-    let textRow = "";
-    for (let column = 1; column <= 8; column++) {
-        if (
-            (row == 2 && column > 1 && column < 8) ||
-            (row == 5 && column > 1 && column < 8)
-        ) {
-            textRow += "#";
-        } else {
-            textRow += ".";
+// Figur 2
+export function figurTvå() {
+    for (let row = 1; row <= 6; row++) {
+        let textRow = "";
+        for (let column = 1; column <= 8; column++) {
+            if (column === row) {
+                textRow += "#";
+            } else {
+                textRow += ".";
+            }
         }
+        console.log(textRow);
     }
-    console.log(textRow);
-}
-console.log(" ");
-
-for (let row = 1; row <= 6; row++) {
-    let textRow = "";
-    for (let column = 1; column <= 8; column++) {
-        if ((column - row - 1) % 3 === 0) {
-            textRow += "#";
-        } else if ((column - row - 2) % 3 === 0) {
-            textRow += "0";
-        } else {
-            textRow += ".";
-        }
-    }
-    console.log(textRow);
 }
 
-console.log("");
-
-for (let row = 1; row <= 6; row++) {
-    let textRow = "";
-    for (let column = 1; column <= 8; column++) {
-        if (row > 0 && row < 4 && column % 3 === 0) {
-            textRow += "#";
-        } else if (row > 4 && row < 8 && (column - row - 1) % 2 === 0) {
-            textRow += "#";
-        } else {
-            textRow += ".";
+// Figur 3
+export function figurTre() {
+    for (let row = 1; row <= 6; row++) {
+        let textRow = "";
+        for (let column = 1; column <= 8; column++) {
+            if (column > 2 && column <= 5) {
+                textRow += "#";
+            } else {
+                textRow += ".";
+            }
         }
+        console.log(textRow);
     }
-    console.log(textRow);
+}
+
+// Figur 4
+export function figurFyra() {
+    for (let row = 1; row <= 6; row++) {
+        let textRow = "";
+        for (let column = 1; column <= 8; column++) {
+            if (column === 3 || row === 3) {
+                textRow += "#";
+            } else {
+                textRow += ".";
+            }
+        }
+        console.log(textRow);
+    }
+}
+
+// Figur 5
+export function figurFem() {
+    for (let row = 1; row <= 6; row++) {
+        let textRow = "";
+        for (let column = 1; column <= 8; column++) {
+            if (column === 5 || column === 7 - row) {
+                textRow += "#";
+            } else {
+                textRow += ".";
+            }
+        }
+        console.log(textRow);
+    }
+}
+// Figur 6
+export function figurSex() {
+    for (let row = 1; row <= 6; row++) {
+        let textRow = "";
+        for (let column = 1; column <= 8; column++) {
+            if (column === row || column === 7 - row) {
+                textRow += "#";
+            } else {
+                textRow += ".";
+            }
+        }
+        console.log(textRow);
+    }
+}
+// Figur 7
+export function figurSju() {
+    for (let row = 1; row <= 6; row++) {
+        let textRow = "";
+        for (let column = 1; column <= 8; column++) {
+            if (column % 2 === 1) {
+                textRow += "#";
+            } else {
+                textRow += ".";
+            }
+        }
+        console.log(textRow);
+    }
+}
+
+// Figur 8
+export function figurOtta() {
+    for (let row = 1; row <= 6; row++) {
+        let textRow = "";
+        for (let column = 1; column <= 8; column++) {
+            if (
+                (row == 2 && column > 1 && column < 8) ||
+                (row == 5 && column > 1 && column < 8)
+            ) {
+                textRow += "#";
+            } else if (row >= 3 && row <= 5 && (column % 5) - 2 === 0) {
+                textRow += "#";
+            } else {
+                textRow += ".";
+            }
+        }
+        console.log(textRow);
+    }
+}
+
+// Figur 9
+export function figurNio() {
+    for (let row = 1; row <= 6; row++) {
+        let textRow = "";
+        for (let column = 1; column <= 8; column++) {
+            if ((column - row - 1) % 3 === 0) {
+                textRow += "#";
+            } else if ((column - row - 2) % 3 === 0) {
+                textRow += "0";
+            } else {
+                textRow += ".";
+            }
+        }
+        console.log(textRow);
+    }
+}
+//  Figur 10
+export function figurTio() {
+    for (let row = 1; row <= 6; row++) {
+        let textRow = "";
+        for (let column = 1; column <= 8; column++) {
+            if (row > 0 && row < 4 && column % 3 === 0) {
+                textRow += "#";
+            } else if (row > 4 && row < 8 && (column - row - 1) % 2 === 0) {
+                textRow += "#";
+            } else {
+                textRow += ".";
+            }
+        }
+        console.log(textRow);
+    }
 }
